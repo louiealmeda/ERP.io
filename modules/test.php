@@ -1,4 +1,4 @@
-<div title = 'Sub Module 2' parent='Module 1'></div>
+<div title = 'Purchasing' parent='Module 1'></div>
 
 <pre>
 quis firmissimum sint adipisicing

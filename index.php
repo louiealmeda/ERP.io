@@ -12,6 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="plugins/bootstrap/css/bootstrap-theme.css"/>
 		<link rel="stylesheet" type="text/css" href="plugins/flexigrid/css/flexigrid.pack.css"/>
 		
+		<link rel="stylesheet" type="text/css" href="css/theme.css"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		
 <!--==================Plugins:END===============-->
@@ -50,12 +51,6 @@ foreach($modules as $module)
 		</div>
 		<div class="sub-header">
 			<div class="container">
-				<div class="btn">
-					lorem
-				</div>
-				<div class="btn">
-					ipsum
-				</div>
 			</div>
 		</div>
 		
