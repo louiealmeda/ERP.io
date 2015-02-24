@@ -1,4 +1,4 @@
-<div title = 'Sub Module 1' parent='Module 1'></div>
+<div title = 'Inventory' parent='Module 1'></div>
 
 <table class="flexme">
 	<thead>

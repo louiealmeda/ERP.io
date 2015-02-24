@@ -1,72 +1,15 @@
-html, body{
-	
-	margin: 0px;
-	padding: 0px;
-	width: 100%;
-	height: 100%;
-	background-color: #DDD;
-/*	background-image: url(../images/texture.png);*/
-	overflow: hidden;
+.ui-button-text:active{
+	outline: none !important;
+	border-radius: none !important;
 }
-
-
-.ui-dialog-titlebar-minimize,
-[title="maximize"][role="button"],
-.ui-dialog-titlebar-restore,
-[title="Close"][role="button"]{
-	border: none !important;
-	text-decoration: none !important;
-	margin: 1px;
-}
-
-
-/*
-.ui-dialog-titlebar-minimize{
-	background-color: #FEB123 !important;
-}
-
-.ui-dialog-titlebar-restore,
-[title="maximize"][role="button"]{
-	background-color: #29C432 !important;
-}
-
-[title="Close"][role="button"]{
-	background-color: #FB4747 !important;
-}
-*/
-
-.ui-icon.glyphicon{
-	color: #333 !important;
+.ui-dialog .ui-dialog-buttonpane button{
+	background-image: none !important;
 	border: 1px solid transparent !important;
-	font-size: 10px;
-}
-.ui-icon.glyphicon:hover{
-	text-decoration: none;
-}
+	outline: none !important;
+	}
 
-.ui-dialog-content.ui-widget-content{
-	width: 100% !important;
-	margin-bottom: 33px;
-}
-.header {
-	background-color: #333;
-	color: white;
-	border-top: 1px solid rgba(255,255,255,0.5);
-	border-bottom: 1px solid rgba(0,0,0,0.5);
-}
-
-.btn{
-	font-size: 16px;
-	border-radius: 0px;
-}
-
-.btn:hover{
-	background-color: #f80;
-	color: #333;
-}
-
-.sub-header {
-	border-top: 1px solid rgba(255,255,255,0.5);
-	border-bottom: 1px solid rgba(0,0,0,0.2);
-	background-color: #f80;
+.ui-dialog .ui-dialog-buttonpane button:hover{
+	border: 1px solid #aaa !important;
+	border-radius: none !important;
+	outline:  none !important;
 }

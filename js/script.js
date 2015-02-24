@@ -119,9 +119,13 @@ var windowManager = {
 		
 		$(target)
 		  .dialog({
+			"width" : "auto",
+			"height" : "auto",
 			"title" : target.attr("data-title"),
-			"buttons" : { "OK" : function(){ $(this).dialog("close"); } }
-		   })
+			"buttons" : { 
+				"Ok" : function(){ $(this).dialog("close"); },
+				 }
+			})
 		  .dialogExtend({
 			"closable" : true,
 			"maximizable" : true,
@@ -228,6 +232,6 @@ $(function(){
 
 function turnTransition(sender, on)
 {
-	on = on ? "0.5s" : "0s";
+	on = on ? "0.3s" : "0s";
 	$(sender).parents(".ui-dialog").css("transition", on);
 }

@@ -1,3 +1,3 @@
 <?php
 
-$modules = array("test","test2", "test3");
+$modules = array("login","create","test","test2", "test3");
