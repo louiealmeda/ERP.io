@@ -1,3 +1,4 @@
+<?php require_once("config.php");?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -29,31 +30,28 @@
 		
 		<script src="js/script.js"></script>
 		
+		<title>National Bookstore</title>
 	</head>
 
 	
-	<body>
+	<body data-core-url='<?php echo $coreUrl; ?>'>
 	
 <?php
-require_once("config.php");
 
+$i = 0;
 foreach($modules as $module)
 {
-	echo "<div id = '$module' data-role = 'dialog' style = 'display: none;'>";
+	echo "<div id = '$module' data-role = 'dialog' style = 'display: none;' data-index='$i'>";
 	require_once("modules/" . $module . ".php");
 	echo "</div>";
+	$i++;
 }
 ?>	
 		<div class="header">
-			<div class="container">
-				
-			</div>
+			<ul class="container nav">
+			</ul>
 		</div>
-		<div class="sub-header">
-			<div class="container">
-			</div>
-		</div>
-		
+		<div id="test-btn" class="btn">Test me!</div>
 	</body>
 
 </html>

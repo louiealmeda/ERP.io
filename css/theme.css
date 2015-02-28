@@ -60,20 +60,66 @@ input, button:focus{
 	border-bottom: 1px solid rgba(0,0,0,0.5);
 }
 
-.btn{
-	font-size: 16px;
-	border-radius: 0px;
+.header .nav{
+	list-style: none;
+	padding: 0px;
 }
 
-.btn:hover{
-	background-color: #f80;
-	color: #333;
+.header .nav>li{
+	display: inline-block;
 }
+
+.header .nav>li > a:focus{
+	background-color: transparent;
+}
+.header .nav>li > a{
+	color: white;
+}
+
+.header .nav>li:hover>a,
+.header .nav>li>a[aria-expanded="true"]{
+	background-color: #f80;
+	color: black;
+}
+
+.header .nav>li>ul{
+	margin-top: 0px;
+	border-radius: 0px;
+	box-shadow: 0px;
+	margin-left: -1px;
+	font-size: 16px;
+	background-color: #f80;
+}
+.header .nav>li>ul.dropdown-menu>li>a:hover{
+	background-image: none;
+	background-color: #333 !important;
+	color: white;
+}
+.header .nav>li>ul>li a{
+	color: black;
+}
+
+button, .btn{
+	font-size: 16px;
+	border-radius: 5px;
+	margin: 5px;
+	border: 1px solid #AAA;
+	margin-left: 0px;
+}
+
+button, .btn:hover{
+	background-color: #CCC;
+}
+
+.ui-dialog-buttonset .btn{
+	float: right;
+}
+
 .sub-header {
 	border-top: 1px solid rgba(255,255,255,0.5);
 	border-bottom: 1px solid rgba(0,0,0,0.2);
 	background-color: #f80;
-	display: none;
+/*	display: none;*/
 }
 .text{
 	outline: none;

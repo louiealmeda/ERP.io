@@ -1,15 +1,19 @@
 .ui-button-text:active{
-	outline: none !important;
-	border-radius: none !important;
+	outline: auto !important;
+	border-radius: 1px solid red !important;
+}
+.ui-dialog .ui-dialog-buttonpane button.ui-state-hover:hover .ui-button-text{
+	background-color: #CCC !important;
 }
 .ui-dialog .ui-dialog-buttonpane button{
 	background-image: none !important;
-	border: 1px solid transparent !important;
-	outline: none !important;
-	}
+/*	border: 1px solid transparent !important;*/
+/*	outline: none !important;*/
+}
 
 .ui-dialog .ui-dialog-buttonpane button:hover{
-	border: 1px solid #aaa !important;
-	border-radius: none !important;
-	outline:  none !important;
+/*	border: 1px solid #aaa !important;*/
+/*	border-radius: none !important;*/
+/*	outline:  none !important;*/
 }
+

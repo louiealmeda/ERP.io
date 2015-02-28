@@ -1,4 +1,12 @@
-<div title = 'Create Account' parent='Module 1'></div>
+<div title = 'Create Account' 
+	 parent='Administration' 
+	 closable
+	 minimizable
+	 maximizable
+	 resizable
+	 modal
+	 ></div>
+
 <form class="create-admin" role="form">
 	<div class="form-group ">
 		<input type="text" name="Name" placeholder="Name" class="form-control">
