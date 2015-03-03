@@ -5,9 +5,9 @@ $coreUrl = "http://localhost:1994/erp-core/";
 $modules = array(
 	"login",
 	"create",
-	"test",
-	"test2",
-	"test3",
+	"purchasing",
+	"sales",
+	"inventory",
 	"view-all-accounts",
 	"changePassword"
 );

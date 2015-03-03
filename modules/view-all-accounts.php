@@ -18,13 +18,40 @@
 
 <script>
 	
+<<<<<<< HEAD
 modules[<?php echo $i; ?>] = {
 	onLoad: function(){
 		
+=======
+//
+modules[<?php echo $i; ?>] = {
+	onLoad: function(){
+		com.post("accounts/getAllUsers", {}, function(data){
+			if(data.Code == "00")
+			{
+				$table = $("#account-list tbody");
+
+				$.each(data.Data, function(i,e){
+					e.AccountID = null;
+
+
+					$row = $("<tr>");
+					$.each(e, function(itemI, itemE){
+						$td = $("<td>");
+						$td.html(itemE);
+						$row.append($td);
+					});
+					$table.append($row);
+				});
+
+			}
+		});		
+>>>>>>> origin/master
 	},
 	onRefresh: function(){
 		alert("Refreshing");
 	},
+<<<<<<< HEAD
 	onOpen:function(){
 		com.post("accounts/getAllUsers", {}, function(data){
 			if(data.Code == "00")
@@ -35,6 +62,8 @@ modules[<?php echo $i; ?>] = {
 		});		
 //		alert("Opening");
 	},
+=======
+>>>>>>> origin/master
 	onRestore: function(){
 //		alert("Restoring");
 	},
