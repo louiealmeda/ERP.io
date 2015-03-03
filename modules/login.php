@@ -1,4 +1,4 @@
-<div title = 'Login' modal></div>
+<div title = 'Login' closable modal></div>
 <div class="buttons">
 	<span class="btn" onclick="submitLogin();">OK</span>
 </div>
@@ -19,7 +19,6 @@ function submitLogin(){
 			password: $("#login-admin #password").val()
 		};
 		com.post("accounts/Login", params,function(data){
-			
 		});
 
 }

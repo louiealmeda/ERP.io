@@ -18,9 +18,6 @@
 
 <script>
 	
-modules[<?php echo $i; ?>] = {
-	onLoad: function(){
-		alert("Loading");
 //
 modules[<?php echo $i; ?>] = {
 	onLoad: function(){
@@ -37,7 +34,7 @@ modules[<?php echo $i; ?>] = {
 					$.each(e, function(itemI, itemE){
 						$td = $("<td>");
 						$td.html(itemE);
-						$row.append($td)
+						$row.append($td);
 					});
 					$table.append($row);
 				});
@@ -47,9 +44,6 @@ modules[<?php echo $i; ?>] = {
 	},
 	onRefresh: function(){
 		alert("Refreshing");
-	},
-	onOpen:function(){
-		alert("Opening");
 	},
 	onRestore: function(){
 		alert("Restoring");
