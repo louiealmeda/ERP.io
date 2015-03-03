@@ -44,7 +44,6 @@ var utilities = {
 			$("body>.wrapper").on("mousedown", function(event){
 				utilities.clickFocus.targets.forEach(function(e,i){
 					
-					
 					if( ($(e.object).hasClass("active") || !e.requireActive) &&  $(event.target) !== $(e.object) && $(event.target).parents(e.object).length == 0) {
 //						$(e).removeClass("active");
 						e.callback();

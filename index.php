@@ -3,6 +3,7 @@
 <html>
 	<head>
 
+		<meta charset="utf-8">
 <!--==================Plugins===============-->
 		<link rel="stylesheet" type="text/css" href="plugins/animate.css"/>
 		<link rel="stylesheet" type="text/css" href="plugins/jquery-ui/jquery-ui.min.css"/>

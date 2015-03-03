@@ -48,28 +48,43 @@ var com = {
 		}
 		
 	},
-	bindSource : function(table, data, columns){
+	bindSource : function(table, data, columns, flex){
 		table = $(table);
 		
-		table.find("thead tr").html("");
-		table.find("tbody").html("");
+		table.html("<thead><tr></tr></thead><tbody></tbody>");
+		
+		if(table.parents(".flexigrid").length > 0)
+		{
+			table.parents(".flexigrid").replaceWith(table);
+			
+		}
+		
+		flex = flex == undefined ? false : flex;
+		
+//		table.find("thead tr").html("");
+//		table.find("tbody").html("");
+		
 		
 		$.each(columns, function(i, column){
-			table.find("thead tr").append($("<th>"+e[column]+"</th>"));
+			table.find("thead tr").append($("<th>"+column+"</th>"));
 		});
 		
 		$.each(data,function(row,e){
 			
-			var tr = $("tr");
+			var tr = $("<tr>");
 			
 			$.each(columns, function(i, column){
-				tr.append($("<td>"+e[column]+"</td>"));
+				tr.append("<td>"+e[column]+"</td>");
 			});
 			
-			table.append(tr);
-		})
+			
+			table.find("tbody").append(tr);
+		});
 		
-		
+		if(flex){
+//			alert(table.html());	
+			table.flexigrid();
+		}
 	}
 }
 

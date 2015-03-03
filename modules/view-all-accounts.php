@@ -1,4 +1,4 @@
-<div title = 'View All Accounts' parent='Administration' closable
+<div title = 'View All Accounts' parent='Administration' resizable closable
 	minimizable></div>
 
 <table id = "account-list" class="flexme">
@@ -20,39 +20,23 @@
 	
 modules[<?php echo $i; ?>] = {
 	onLoad: function(){
-		alert("Loading");
-//
-modules[<?php echo $i; ?>] = {
-	onLoad: function(){
-		com.post("accounts/getAllUsers", {}, function(data){
-			if(data.Code == "00")
-			{
-				$table = $("#account-list tbody");
-
-				$.each(data.Data, function(i,e){
-					e.AccountID = null;
-
-
-					$row = $("<tr>");
-					$.each(e, function(itemI, itemE){
-						$td = $("<td>");
-						$td.html(itemE);
-						$row.append($td)
-					});
-					$table.append($row);
-				});
-
-			}
-		});		
+		
 	},
 	onRefresh: function(){
 		alert("Refreshing");
 	},
 	onOpen:function(){
-		alert("Opening");
+		com.post("accounts/getAllUsers", {}, function(data){
+			if(data.Code == "00")
+			{
+				com.bindSource("#account-list", data.Data, ["Username", "Status", "Type", "Name", "Surname"]);
+				
+			}
+		});		
+//		alert("Opening");
 	},
 	onRestore: function(){
-		alert("Restoring");
+//		alert("Restoring");
 	},
 	onClose:function(){
 		alert("Closing");
@@ -71,7 +55,7 @@ modules[<?php echo $i; ?>] = {
 	onMinimize: function(){
 		alert("Minimizing");
 	}
-}
+};
 
 //	
 //	$(document).ready(function(){
