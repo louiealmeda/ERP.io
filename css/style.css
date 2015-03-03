@@ -17,3 +17,6 @@
 /*	outline:  none !important;*/
 }
 
+.ui-dialog-content .ui-widget-content .ui-dialog-normal{
+	padding: 4px !important;
+}
