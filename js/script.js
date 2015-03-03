@@ -13,8 +13,6 @@ var com = {
 	simulatedTimeDelay: 500,
 	post: function(url, params, callback, prototypingValue){
 		
-		
-		
 		prototypingValue = prototypingValue || '{"Code":"00", "Message":"This is a default prototyping value."}';
 		
 		if(com.logRequests)
@@ -48,6 +46,29 @@ var com = {
 			}, com.simulatedTimeDelay);
 			
 		}
+		
+	},
+	bindSource : function(table, data, columns){
+		table = $(table);
+		
+		table.find("thead tr").html("");
+		table.find("tbody").html("");
+		
+		$.each(columns, function(i, column){
+			table.find("thead tr").append($("<th>"+e[column]+"</th>"));
+		});
+		
+		$.each(data,function(row,e){
+			
+			var tr = $("tr");
+			
+			$.each(columns, function(i, column){
+				tr.append($("<td>"+e[column]+"</td>"));
+			});
+			
+			table.append(tr);
+		})
+		
 		
 	}
 }

@@ -30,14 +30,28 @@
 
 <script>
 	
-	{
-		function onLoad(){
-			alert("Loading");		
-		},
-		function onRefresh(){
-			
-		}
+modules[<?php echo $i; ?>] = {
+	onLoad: function(){
+		alert("Loading");
+	},
+	onRefresh: function(){
+		alert("Refreshing");
+	},
+	onOpen:function(){
+		alert("Opening");
+	},
+	onRestore: function(){
+		alert("Restoring");
+	},
+	onClose:function(){
+		alert("Closing");
+		
+	},
+	onMinimize: function(){
+		alert("Minimizing");
 	}
+}
+
 //	
 //	$(document).ready(function(){
 //		
