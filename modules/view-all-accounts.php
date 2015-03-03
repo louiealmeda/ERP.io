@@ -17,12 +17,10 @@
 </table>
 
 <script>
-<<<<<<< HEAD
 	
 modules[<?php echo $i; ?>] = {
 	onLoad: function(){
 		alert("Loading");
-=======
 //
 modules[<?php echo $i; ?>] = {
 	onLoad: function(){
@@ -46,12 +44,10 @@ modules[<?php echo $i; ?>] = {
 
 			}
 		});		
->>>>>>> origin/master
 	},
 	onRefresh: function(){
 		alert("Refreshing");
 	},
-<<<<<<< HEAD
 	onOpen:function(){
 		alert("Opening");
 	},
@@ -62,7 +58,6 @@ modules[<?php echo $i; ?>] = {
 		alert("Closing");
 		
 	},
-=======
 	// onOpen:function(){
 	// 	alert("Opening");
 	// },
@@ -73,12 +68,10 @@ modules[<?php echo $i; ?>] = {
 	// 	alert("Closing");
 		
 	// },
->>>>>>> origin/master
 	onMinimize: function(){
 		alert("Minimizing");
 	}
 }
-<<<<<<< HEAD
 
 //	
 //	$(document).ready(function(){
@@ -89,6 +82,4 @@ modules[<?php echo $i; ?>] = {
 //			alert(data);
 //		});
 //	});
-=======
->>>>>>> origin/master
 </script>

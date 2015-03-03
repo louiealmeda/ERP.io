@@ -1,10 +1,9 @@
-<div title = 'Login'  closable 
-	modal></div>
+<div title = 'Login' modal></div>
 <div class="buttons">
 	<span class="btn" onclick="submitLogin();">OK</span>
 </div>
 
-<form class="login-admin" id="login-admin">
+<form class="login-admin" id="login-admin" >
 	<div style="width: 400px; padding: 1px;">
 		<span class="col-sm-12" style="padding: 4px;"><input type="text" name="Username" id="username" placeholder="Username" class="form-control"></span>
 		<span class="col-sm-12" style="padding: 4px;"><input type="password" name="Password" id="password" placeholder="Password" class="form-control"></span>
@@ -20,7 +19,7 @@ function submitLogin(){
 			password: $("#login-admin #password").val()
 		};
 		com.post("accounts/Login", params,function(data){
-			//alert(data);
+			
 		});
 
 }
