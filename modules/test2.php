@@ -1,10 +1,14 @@
-<div title = 'Sales' parent='Sales'></div>
+<div title = 'Sales' parent='Sales' closable
+	 minimizable
+	 maximizable
+	 resizable
+	 ></div>
 
 <table class="flexme">
 	<thead>
 		<tr>
-			<th width="100">Col 1</th>
-			<th width="100">Col 2</th>
+			<th width="100">Item name</th>
+			<th width="100">Description</th>
 			<th width="100">Col 3 is a long header name</th>
 			<th width="300">Col 4</th>
 		</tr>
@@ -16,74 +20,11 @@
 			<td>This is data 3</td>
 			<td>This is data 4</td>
 		</tr>
-		<tr>
-			<td>This is data 1</td>
-			<td>This is data 2</td>
-			<td>This is data 3</td>
-			<td>This is data 4</td>
-		</tr>
-		<tr>
-			<td>This is data 1</td>
-			<td>This is data 2</td>
-			<td>This is data 3</td>
-			<td>This is data 4</td>
-		</tr>
-		<tr>
-			<td>This is data 1</td>
-			<td>This is data 2</td>
-			<td>This is data 3</td>
-			<td>This is data 4</td>
-		</tr>
-		<tr>
-			<td>This is data 1</td>
-			<td>This is data 2</td>
-			<td>This is data 3</td>
-			<td>This is data 4</td>
-		</tr>
-		<tr>
-			<td>This is data 1</td>
-			<td>This is data 2</td>
-			<td>This is data 3</td>
-			<td>This is data 4</td>
-		</tr>
-		<tr>
-			<td>This is data 1</td>
-			<td>This is data 2</td>
-			<td>This is data 3</td>
-			<td>This is data 4</td>
-		</tr>
-		<tr>
-			<td>This is data 1</td>
-			<td>This is data 2</td>
-			<td>This is data 3</td>
-			<td>This is data 4</td>
-		</tr>
-		<tr>
-			<td>This is data 1</td>
-			<td>This is data 2</td>
-			<td>This is data 3</td>
-			<td>This is data 4</td>
-		</tr>
-		<tr>
-			<td>This is data 1</td>
-			<td>This is data 2</td>
-			<td>This is data 3</td>
-			<td>This is data 4</td>
-		</tr>
-		<tr>
-			<td>This is data 1</td>
-			<td>This is data 2</td>
-			<td>This is data 3</td>
-			<td>This is data 4</td>
-		</tr>
-		<tr>
-			<td>This is data 1</td>
-			<td>This is data 2</td>
-			<td>This is data 3</td>
-			<td>This is data 4</td>
-		</tr>
 	</tbody>
 </table>
+
+
+
 
 <script>
 	console.log("Called!");

@@ -50,8 +50,7 @@ input, button:focus{
 }
 
 .ui-dialog-content.ui-widget-content{
-	width: 100% !important;
-	margin-bottom: 33px;
+	margin-bottom: 44px;
 }
 .header {
 	background-color: #333;
@@ -125,16 +124,18 @@ button, .btn:hover{
 	outline: none;
 	padding: 2px;
 	margin: 4px;
-}.form-group{
-	display: inline-table !important;
-	width: auto !important;
 }
 .form-control{
 	outline: none !important;
 	margin-bottom: 2px !important;
-	width: auto !important;
 }
-.col-sm-10{
-
-	width: auto !important;
+.select{
+	padding: 7.5px;
+	width: 100%;
+	border: 0px;
+	border-radius: 5px;
+}
+.select:focus{
+	outline: none;
+	border: 0px;
 }

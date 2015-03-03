@@ -74,6 +74,7 @@ var com = {
 }
 
 $(document).ready(function(){
+	
 	config.initialize();
 	
 	windowManager.initialize();
@@ -195,7 +196,7 @@ var windowManager = {
 				create: function( event, ui ) {
 					var buttons = target.children(".buttons");
 					
-					
+					windowManager.callEvent(target, "onLoad");	
 //					target.parent().find(".ui-button-text").removeClass("ui-button-text").addClass("btn");
 					if(buttons.length != 0)
 					{
