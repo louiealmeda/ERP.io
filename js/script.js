@@ -1,3 +1,12 @@
+$(document).ready(function(){
+	
+	config.initialize();
+
+//	com.isPrototyping = true;
+	
+	
+});
+
 var config = {
 	initialize: function(){
 		config.coreUrl = $("body[data-core-url]").attr("data-core-url");
@@ -6,8 +15,31 @@ var config = {
 	
 }
 
+var accounts = {
+	isLoggedIn : false,
+	details: null,
+	initialize: function(){
+		
+		$("body").startLoading();
+		com.post("accounts/getUserInfo",{},function(data){
+			$("body").stopLoading();
+			windowManager.initialize();
+			if(data.Code != "00")
+			{
+				windowManager.showDialog('#login');
+				accounts.details = data.Data;
+			}
+			
+		});
+	},
+	logout: function(){
+		com.post("accounts/logout",{},function(data){
+			window.location.reload();
+		});
+	}
+};
+
 var com = {
-	
 	logRequests: true,
 	isPrototyping: false,
 	simulatedTimeDelay: 500,
@@ -88,22 +120,25 @@ var com = {
 	}
 }
 
-$(document).ready(function(){
-	
-	config.initialize();
-	
-	windowManager.initialize();
 
-//	com.isPrototyping = true;
-	
-	
-});
 
 var modules = {
 	
 };
 
 var windowManager = {
+	statusType : {
+		ERROR : "red",
+		WARNING: "orange",
+		SUCCESS: "green"
+	},
+	setStatus: function(dialog, message, type)
+	{
+		var statusField = $(dialog).parents(".ui-dialog").find(".status-field");;
+		statusField.html(message);
+		statusField.removeClass("red orange green");
+		statusField.addClass(type);
+	},
 	callEvent: function(index, method){
 		
 		index = typeof index == "object" ? $(index).attr("data-index") : index;
@@ -185,6 +220,12 @@ var windowManager = {
 			if($settings.attr("modal") != undefined)
 				$(e).prop("modal", true);
 			
+			
+			if($settings.attr("width") != undefined)
+				$(e).attr("data-width", $settings.attr("width"));
+			if($settings.attr("height") != undefined)
+				$(e).attr("data-height", $settings.attr("height"));
+			
 			$settings.remove();
 		});
 	},	
@@ -192,11 +233,14 @@ var windowManager = {
 		target = $(target);
 		$(target)
 			.dialog({
+				appendTo : "body>.wrapper",
+				closeOnEscape: $(target).prop("closable") != undefined, 
 				"resizable": $(target).prop("resizable") != undefined,
 				"modal": $(target).prop("modal") != undefined,
-				"width" : "auto",
-				"height" : "auto",
+				"width" : target.attr("data-width") != undefined ? target.attr("data-width") : "auto",
+				"height" :target.attr("data-height") != undefined ? target.attr("data-height") : "auto",
 				"title" : target.attr("data-title"),
+				"dialogClass" : "dialog-" + $(target).attr("id"),
 				"buttons" : { 
 					"Ok" : function(){ $(this).dialog("close"); },
 				},

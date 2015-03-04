@@ -40,6 +40,10 @@ input, button:focus{
 }
 */
 
+.ui-dialog-titlebar.ui-widget-header{
+	cursor: default !important;
+}
+
 .ui-icon.glyphicon{
 	color: #333 !important;
 	border: 1px solid transparent !important;
@@ -51,6 +55,8 @@ input, button:focus{
 
 .ui-dialog-content.ui-widget-content{
 	margin-bottom: 44px;
+	width: 100% !important;
+	height: calc(100% - 85px) !important;
 }
 .header {
 	background-color: #333;
@@ -139,3 +145,17 @@ button, .btn:hover{
 	outline: none;
 	border: 0px;
 }
+
+.wrapper{
+	height: calc(100% - 40px);
+}
+.status-field {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+.status-field.red { color: red;}
+.status-field.orange { color: orange;}
+.status-field.green { color: green;}

@@ -1,5 +1,4 @@
-<div title = 'Change Password' parent="Administration" closable 
-	modal></div>
+<div title = 'Change Password' parent="Administration" closable ></div>
 <div class="buttons">
 	<span class="btn" onclick="changePassword();">OK</span>
 </div>

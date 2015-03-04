@@ -1,5 +1,11 @@
-<div title = 'View All Accounts' parent='Administration' resizable closable
-	minimizable></div>
+<div title = 'View All Accounts' parent='Administration' 
+	resizable 
+	closable
+	minimizable
+	width = "644"
+	height = "284"
+	authorization = "admin"
+	 ></div>
 
 <table id = "account-list" class="flexme">
 	<thead>
@@ -18,12 +24,6 @@
 
 <script>
 	
-<<<<<<< HEAD
-modules[<?php echo $i; ?>] = {
-	onLoad: function(){
-		
-=======
-//
 modules[<?php echo $i; ?>] = {
 	onLoad: function(){
 		com.post("accounts/getAllUsers", {}, function(data){
@@ -45,13 +45,12 @@ modules[<?php echo $i; ?>] = {
 				});
 
 			}
-		});		
->>>>>>> origin/master
+		});	
 	},
 	onRefresh: function(){
 		alert("Refreshing");
 	},
-<<<<<<< HEAD
+
 	onOpen:function(){
 		com.post("accounts/getAllUsers", {}, function(data){
 			if(data.Code == "00")
@@ -62,8 +61,6 @@ modules[<?php echo $i; ?>] = {
 		});		
 //		alert("Opening");
 	},
-=======
->>>>>>> origin/master
 	onRestore: function(){
 //		alert("Restoring");
 	},

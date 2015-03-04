@@ -31,6 +31,7 @@
 		
 		<script src="js/script.js"></script>
 		<script src="js/menu-driver.js"></script>
+		<script src="js/interaction-driver.js"></script>
 		
 		<title>National Bookstore</title>
 	</head>
@@ -51,9 +52,12 @@ foreach($modules as $module)
 ?>	
 		<div class="header">
 			<ul class="container nav">
+				<li class="pull-right"><a class="dropdown-toggle" onclick="accounts.logout();">Logout</a></li>
 			</ul>
 		</div>
-		<div ></div>
+		
+		<div class="wrapper"></div>
+<!--		<div class="loading-page"></div>-->
 	</body>
 
 </html>
