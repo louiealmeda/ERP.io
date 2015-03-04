@@ -1,6 +1,6 @@
 <?php
 
-$coreUrl = "http://localhost:1994/erp-core/";
+$coreUrl = "http://localhost/erp-core/";
 
 $modules = array(
 	"login",
@@ -9,5 +9,6 @@ $modules = array(
 	"sales",
 	"inventory",
 	"view-all-accounts",
-	"changePassword"
+	"changePassword",
+	"createVendors"
 );
