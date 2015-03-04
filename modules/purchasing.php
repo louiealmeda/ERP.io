@@ -58,23 +58,6 @@ modules[<?php echo $i; ?>] = {
 				});		
 			}
 		});
-
-	// onLoad: function(){
-//		com.post("accounts/viewAllVendors", {}, function(data){
-//			if(data.Code == "00")
-//			{
-//				$div = $("#purchasing div");
-//				$.each(data.Data, function(i,e){
-//					e.VendorID = null;
-//				
-//				$.each(data.Data, function(i,e){
-//				$select =$("#purchasing div .VendorID").append("<option value="+e.VendorID+"></option><option value="+e.fullName+"></option>");
-//				});
-//				$div.append($select);
-//				}
-//
-//			}
-//		});		
 	},
 	onRefresh: function(){
 		alert("Refreshing");

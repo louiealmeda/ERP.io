@@ -1,33 +1,61 @@
-<div title = 'Sales' parent='Sales' closable
-	 minimizable
-	 maximizable
-	 resizable
-	 ></div>
+<div title = 'Sales order' parent='Sales' closable></div>
+<div class="buttons">
+	<span class="btn" onclick="">OK</span>
+</div>
 
-<table class="flexme">
-	<thead>
-		<tr>
-			<th width="100">Item name</th>
-			<th width="100">Description</th>
-			<th width="100">Col 3 is a long header name</th>
-			<th width="300">Col 4</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>This is data 1 with overflowing content</td>
-			<td>This is data 2</td>
-			<td>This is data 3</td>
-			<td>This is data 4</td>
-		</tr>
-	</tbody>
-</table>
-
-
-
-
+<form class="sales" id="sales" >
+	<div style="width: auto; padding: 1px;">
+		<table>
+			<thead>
+				<th>Name</th>
+				<th>Quantity</th>
+				<th>Total</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input id="itemName" class="form-control"></td>
+					<td><input type="text" id="quantity" placeholder="Quantity" class="form-control"></td>
+					<td><input type="text" id="quantity" placeholder="Price" class="form-control"></td>
+					<td><input type="text" id="total" placeholder="Total" class="form-control"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<input type="submit" style="display: none;">
+</form>
 <script>
-	console.log("Called!");
-	$('.flexme').flexigrid();
-	
+
+modules[<?php echo $i; ?>] = {
+	onLoad:function(){
+		com.post("inventory/viewItemDetails",{}, function(data){
+			var names = [];
+			if (data.Code == "00") 
+			{
+				$.each(data.Data, function(i,e){
+					names[names.length] = e.Name;
+				});
+				
+				$(function(){
+					$('#itemName').autocomplete({
+						source: names,
+						minLength: 0 ,
+						appendTo: "body"
+					});
+				}).click(function(){
+					$(this).trigger('keydown');
+				})
+
+			}
+		});		
+	},
+	onRefresh: function(){
+		alert("Refreshing");
+	},
+	// onRestore: function(){
+	// 	alert("Restoring");
+	// },
+	onMinimize: function(){
+		alert("Minimizing");
+	}
+}
 </script>
