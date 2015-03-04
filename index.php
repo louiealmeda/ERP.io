@@ -49,7 +49,9 @@ foreach($modules as $module)
 	echo "</div>";
 	$i++;
 }
-?>	
+
+echo $coreUrl;
+?>
 		<div class="header">
 			<ul class="container nav">
 				<li class="pull-right"><a class="dropdown-toggle" onclick="accounts.logout();">Logout</a></li>
