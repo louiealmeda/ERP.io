@@ -4,7 +4,7 @@
 	minimizable
 	width = "644"
 	height = "284"
-	authorization = "admin"
+	authorization = "ADMIN"
 	 ></div>
 
 <table id = "account-list" class="flexme">

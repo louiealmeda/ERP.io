@@ -23,11 +23,15 @@ var accounts = {
 		$("body").startLoading();
 		com.post("accounts/getUserInfo",{},function(data){
 			$("body").stopLoading();
-			windowManager.initialize();
 			if(data.Code != "00")
 			{
+				windowManager.initialize();
 				windowManager.showDialog('#login');
+			}
+			else
+			{
 				accounts.details = data.Data;
+				windowManager.initialize();
 			}
 			
 		});
@@ -156,7 +160,18 @@ var windowManager = {
 		$("[data-role='dialog']").each(function(i,e){
 		
 			$settings = $(e).children(":first-child");
+			var authorization = $settings.attr("authorization");
 
+			if( accounts.details != null && authorization != undefined)
+			{
+				if(accounts.details.Type != "ADMIN" && accounts.details.Type != authorization)
+				{
+					return true;
+				}
+				
+			}
+			
+			
 			$button = $("<li><a href='#'></a></li>");
 			
 			var onclick = "windowManager.showDialog('#"+$(e).attr("id")+"')";

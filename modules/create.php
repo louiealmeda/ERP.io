@@ -1,5 +1,6 @@
 <div title = 'Create Account' 
 	 parent='Administration' 
+	 authorization = "ADMIN"
 	closable
 	 ></div>
 
@@ -15,9 +16,9 @@
 		<span class="col-sm-12" style="padding: 4px;"><input type="password" name="confirmPassword" id="confirm-password" placeholder="Confirm Password" class="form-control"></span>
 		<span class="col-sm-12" style="padding: 4px;"><input type="password" name="adminPassword" id="adminPassword"placeholder="Admin password" class="form-control"></span>
 		<span  class="col-sm-12" style="padding: 4px;"><select name="type" class="select" id="type">
-		<option>ADMIN</option>
-		<option>CASHIER</option>
-		<option>PURCHASE</option></select></span>
+		<option value="ADMIN">Administrator</option>
+		<option value="CASHIER">Cashier</option>
+		<option value="PURCHASING">Purchasing</option></select></span>
 </div>
 	<input type="submit" style="display: none;">
 </form>

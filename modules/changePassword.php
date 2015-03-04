@@ -1,4 +1,4 @@
-<div title = 'Change Password' parent="Administration" closable ></div>
+<div title = 'Change Password' parent="Account" closable ></div>
 <div class="buttons">
 	<span class="btn" onclick="changePassword();">OK</span>
 </div>
@@ -25,7 +25,7 @@ function changePassword(){
 			return;
 		}
 		com.post("accounts/changePassword", params,function(data){
-			//alert(data);
+			
 		});
 
 }
