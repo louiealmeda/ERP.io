@@ -37,7 +37,7 @@ tr:hover{
 }
 
 thead{
-	background-color: #EEE;
+	background-color: #FFF;
 }
 
 thead th{
@@ -55,4 +55,10 @@ tbody td{
 	background-color: #DDD;
 	top: 0px;
 	left: 0px;
+}
+
+table input.form-control{
+	background-color: transparent !important;
+	padding: 0px !important;
+	border: 1px solid transparent !important;
 }

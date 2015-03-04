@@ -26,29 +26,9 @@
 	
 modules[<?php echo $i; ?>] = {
 	onLoad: function(){
-		com.post("accounts/getAllUsers", {}, function(data){
-			if(data.Code == "00")
-			{
-				$table = $("#account-list tbody");
-
-				$.each(data.Data, function(i,e){
-					e.AccountID = null;
-
-
-					$row = $("<tr>");
-					$.each(e, function(itemI, itemE){
-						$td = $("<td>");
-						$td.html(itemE);
-						$row.append($td);
-					});
-					$table.append($row);
-				});
-
-			}
-		});	
 	},
 	onRefresh: function(){
-		alert("Refreshing");
+
 	},
 
 	onOpen:function(){
@@ -65,7 +45,6 @@ modules[<?php echo $i; ?>] = {
 //		alert("Restoring");
 	},
 	onClose:function(){
-		alert("Closing");
 		
 	},
 	// onOpen:function(){
@@ -79,7 +58,6 @@ modules[<?php echo $i; ?>] = {
 		
 	// },
 	onMinimize: function(){
-		alert("Minimizing");
 	}
 };
 

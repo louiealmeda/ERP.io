@@ -54,7 +54,7 @@ modules[<?php echo $i; ?>] = {
 			if(data.Code == "00")
 			{
 				$.each(data.Data, function(i,e){
-				$("#purchasing div #VendorID").append("<option value='"+e.VendorID+"'>"+e.FullName+"</option>");
+					$("#purchasing div #VendorID").append("<option value='"+e.VendorID+"'>"+e.FullName+"</option>");
 				});		
 			}
 		});

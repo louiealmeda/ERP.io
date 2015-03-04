@@ -134,12 +134,17 @@ button, .btn:hover{
 .form-control{
 	outline: none !important;
 	margin-bottom: 2px !important;
+	background-color: #DDD;
+	border: 1px solid #BABABA !important;
 }
 .select{
+	background-color: #DDD;
+	border: 1px solid #BABABA !important;
 	padding: 7.5px;
 	width: 100%;
 	border: 0px;
 	border-radius: 5px;
+	height: 35px;
 }
 .select:focus{
 	outline: none;
@@ -159,3 +164,7 @@ button, .btn:hover{
 .status-field.red { color: red;}
 .status-field.orange { color: orange;}
 .status-field.green { color: green;}
+
+.ui-autocomplete{
+	z-index: 500;
+}
