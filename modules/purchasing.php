@@ -28,7 +28,6 @@
 <script>
 
 modules[<?php echo $i; ?>] = {
-<<<<<<< HEAD
 	onLoad:function(){
 		com.post("items/viewAllItems",{}, function(data){
 			var names = [];
@@ -60,8 +59,7 @@ modules[<?php echo $i; ?>] = {
 			}
 		});
 
-=======
-	onLoad: function(){
+	// onLoad: function(){
 //		com.post("accounts/viewAllVendors", {}, function(data){
 //			if(data.Code == "00")
 //			{
@@ -77,7 +75,6 @@ modules[<?php echo $i; ?>] = {
 //
 //			}
 //		});		
->>>>>>> origin/master
 	},
 	onRefresh: function(){
 		alert("Refreshing");
